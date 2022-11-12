@@ -1,0 +1,268 @@
+.s5 {
+  position: relative;
+  height: 100vh;
+
+  .overlay {
+    &::after {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      pointer-events: none;
+      content: "";
+      position: absolute;
+      z-index: 100;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      bottom: -2.5px;
+      background: -o-linear-gradient(
+        top,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 75%,
+        rgba(16, 24, 32, 1) 100%
+      );
+      background: -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(255, 255, 255, 0)),
+        color-stop(75%, rgba(255, 255, 255, 0)),
+        to(rgba(16, 24, 32, 1))
+      );
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 75%,
+        rgba(16, 24, 32, 1) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#101820",GradientType=1);
+    }
+  }
+
+  .main-article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 780px;
+    margin: 0 auto;
+    height: 80vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+      height: 0;
+    }
+
+    article {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      border-bottom: 1px solid #e1e1e1;
+      margin-bottom: sizerem(large);
+      padding-bottom: sizerem(large);
+
+      .image {
+        margin-bottom: sizerem(large);
+
+        a {
+          display: block;
+          width: 100%;
+        }
+
+        img {
+          width: 100%;
+          -o-object-fit: cover;
+          object-fit: cover;
+        }
+
+        @include media(">tablet") {
+          margin-bottom: 0;
+          margin-right: sizerem(large);
+        }
+      }
+
+      .text {
+        display: block;
+        width: 100%;
+        font-size: sizerem(small);
+        font-weight: weight(bold);
+        color: white;
+
+        .blog-title {
+          color: white;
+          font-size: sizerem(larger);
+          margin-bottom: sizerem(normal);
+        }
+
+        .blog-date {
+          color: #e0e351;
+          margin-bottom: sizerem(normal);
+          line-height: 0;
+        }
+
+        .blog-p {
+          font-weight: weight(regular);
+          line-height: sizerem(large);
+          margin-bottom: sizerem(small) !important;
+        }
+
+        .blog-readmore {
+          color: white;
+          line-height: 1;
+        }
+      }
+
+      @include media("<tablet") {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+    }
+
+    .btn-view-more {
+      -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      padding: sizerem(small);
+      border-style: none;
+      border-radius: sizerem(small);
+
+      &:hover {
+        background: -o-linear-gradient(top, #e7df3b 0%, #5dc6ae 100%);
+        background: -webkit-gradient(linear, left top, left bottom, from(#e7df3b), to(#5dc6ae));
+        background: linear-gradient(180deg, #e7df3b 0%, #5dc6ae 100%);
+        -webkit-transition: background-color 1s linear;
+        -o-transition: background-color 1s linear;
+        transition: background-color 1s linear;
+      }
+    }
+
+    @include media("<tablet") {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  .insight {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin: 0 0.5rem 1rem;
+    max-width: 320px;
+    border-radius: 20px;
+
+    .insight-meta {
+      height: 75%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      .fi-by {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        font-size: sizerem(small);
+        line-height: 1;
+        color: white;
+      }
+
+      .btn-uncateg {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        background: white;
+        padding: 0.75rem 0.5rem;
+        line-height: 0;
+        border-style: none;
+
+        .fi-uncateg {
+          font-weight: weight(medium);
+          font-size: sizerem(small);
+          color: #473e3e;
+          text-transform: uppercase;
+        }
+      }
+
+      .fi-div-title {
+        position: absolute;
+        bottom: 60px;
+        left: 20px;
+
+        .fi-date {
+          font-weight: weight(bold);
+          font-size: sizerem(small);
+          color: #e0e351;
+        }
+
+        .fi-title {
+          font-weight: weight(bold);
+          font-size: sizerem(normal);
+          color: white;
+        }
+      }
+    }
+  }
+
+  .crop-div {
+    height: 150px;
+    margin: 0 0.5rem 0;
+    padding: 0;
+    max-width: 320px;
+    overflow-y: clip;
+
+    .crop-insight {
+      position: relative;
+      height: 225px;
+      width: 100%;
+      max-width: 350px;
+      border-radius: 20px;
+    }
+  }
+
+  .div-view-more {
+    .btn-view-more {
+      background: white;
+      min-width: 120px;
+      -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 0.5rem;
+      padding: 0.25rem 0.5rem;
+      border-style: none;
+
+      &:hover {
+        background: -o-linear-gradient(top, #e7df3b 0%, #5dc6ae 100%);
+        background: -webkit-gradient(linear, left top, left bottom, from(#e7df3b), to(#5dc6ae));
+        background: linear-gradient(180deg, #e7df3b 0%, #5dc6ae 100%);
+        -webkit-transition: background-color 1s linear;
+        -o-transition: background-color 1s linear;
+        transition: background-color 1s linear;
+      }
+
+      .fi-view-more {
+        font-size: sizerem(small);
+        text-transform: uppercase;
+        color: #214974;
+
+        @include media(">tablet") {
+          font-size: sizerem(larger);
+        }
+      }
+
+      @include media(">tablet") {
+        min-width: 160px;
+        border-radius: 1rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+}

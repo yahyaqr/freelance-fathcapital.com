@@ -1,0 +1,22 @@
+.s4 {
+  position: relative;
+  height: 100vh;
+}
+
+.text-partner {
+  width: 5ch;
+
+  span {
+    font-weight: weight(regular);
+    font-size: sizerem(normal);
+    color: white;
+
+    @include media(">tablet") {
+      font-size: sizerem(large);
+    }
+
+    @include media(">desktop") {
+      font-size: sizerem(largest);
+    }
+  }
+}

@@ -1,0 +1,177 @@
+@import "./include-media";
+@import "./variables";
+@import "./light-nav";
+@import "./about-us-intro";
+@import "./about-us-carousel";
+@import "./footer";
+@import "./hide";
+@import "./fp";
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  background-color: #101820;
+  font-family: "Montserrat";
+}
+
+.img-main-contact {
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+  padding: 0;
+
+  &::after {
+    content: ""; // ::before and ::after both require content
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -o-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(16, 24, 32, 1) 85%
+    );
+    background: -webkit-gradient(
+      linear,
+      left top, left bottom,
+      from(rgba(255, 255, 255, 0)),
+      color-stop(50%, rgba(255, 255, 255, 0)),
+      color-stop(85%, rgba(16, 24, 32, 1))
+    );
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(16, 24, 32, 1) 85%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#101820",GradientType=1);
+  }
+
+  img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+
+    @include media(">desktop") {
+      height: 100vh;
+    }
+  }
+}
+
+.header {
+  margin-top: sizerem(display-1);
+  margin-bottom: sizerem(normal);
+
+  .contact-title {
+    font-weight: weight(bold);
+    font-size: sizerem(largest);
+    text-align: center;
+    color: white;
+
+    @include media(">tablet") {
+      font-size: sizerem(display-1);
+    }
+
+    @include media(">desktop") {
+      font-size: sizerem(display-2);
+    }
+  }
+
+  @include media(">desktop") {
+    margin-top: sizerem(display-3);
+  }
+}
+
+.get-in-touch {
+  .div-contact {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-box-shadow: 10px 10px 20px -10px rgba(255, 255, 255, 0.2);
+    box-shadow: 10px 10px 20px -10px rgba(255, 255, 255, 0.2);
+    border-radius: sizerem(normal);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    @include media(">tablet") {
+      width: 60vw;
+    }
+  }
+
+  .card-body {
+    padding: sizerem(display-1);
+  }
+
+  .title-input-contact {
+    font-weight: weight(regular);
+    font-size: sizerem(normal);
+    color: white;
+  }
+
+  .col-12 {
+    margin-bottom: sizerem(large);
+  }
+
+  .input-textarea-contact {
+    background: rgba(255, 255, 255);
+    padding: sizerem(small);
+  }
+
+  .form-control {
+    color: white;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  option {
+    color: black;
+  }
+
+  .btn-submit {
+    width: 100%;
+    color: white;
+    font-weight: weight(medium);
+    background: -o-linear-gradient(top, #3191a1 0%, #218c66 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#3191a1), to(#218c66));
+    background: linear-gradient(180deg, #3191a1 0%, #218c66 100%);
+    padding: sizerem(small);
+    border-style: none;
+    text-align: center;
+
+    &:hover {
+      font-weight: weight(bold);
+      background: -o-linear-gradient(
+        top,
+        rgba(49, 144, 161, 0.8) 0%,
+        rgb(33, 140, 102, 0.8) 100%
+      );
+      background: -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(49, 144, 161, 0.8)),
+        to(rgb(33, 140, 102, 0.8))
+      );
+      background: linear-gradient(
+        180deg,
+        rgba(49, 144, 161, 0.8) 0%,
+        rgb(33, 140, 102, 0.8) 100%
+      );
+    }
+
+    @include media(">tablet") {
+      width: 25vw;
+    }
+  }
+
+  @include media(">desktop") {
+    margin-bottom: sizerem(display-3);
+  }
+}

@@ -1,0 +1,25 @@
+.fp-watermark {
+  display: none;
+}
+
+#fp-nav {
+  display: none;
+
+  @include media(">tablet") {
+    display: block;
+  }
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background-color: #5dc6ae;
+}
+
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  background: -o-linear-gradient(top, #e7df3b 0%, #5dc6ae 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#e7df3b), to(#5dc6ae));
+  background: linear-gradient(180deg, #e7df3b 0%, #5dc6ae 100%);
+}

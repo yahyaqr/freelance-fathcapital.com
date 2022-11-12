@@ -1,0 +1,75 @@
+@import "./include-media";
+@import "./variables";
+@import "./dark-nav";
+@import "./s1";
+@import "./s2";
+@import "./s3";
+@import "./s4";
+@import "./s5";
+@import "./footer";
+@import "./hide";
+@import "./fp";
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  background-color: #101820;
+  font-family: "Montserrat";
+}
+
+.vertical-scrolling {
+  width: 100vw;
+  overflow-x: clip;
+}
+
+.active {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.img-main {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+
+  @include media(">tablet") {
+    width: 100%;
+  }
+}
+
+.img-back {
+  width: 100%;
+}
+
+.header {
+  font-size: 48px;
+  font-size: 10vw;
+  font-weight: 800;
+  text-align: center;
+  background: -o-linear-gradient(top, #e7df3b 0%, #5dc6ae 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#e7df3b), to(#5dc6ae));
+  background: linear-gradient(180deg, #e7df3b 0%, #5dc6ae 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  width: 100%;
+
+  @include media(">tablet") {
+    font-size: 72px;
+    font-size: 8vw;
+  }
+
+  @include media(">desktop") {
+    font-size: 96px;
+    font-size: 8vw;
+  }
+}

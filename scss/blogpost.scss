@@ -1,0 +1,134 @@
+@import "./include-media";
+@import "./variables";
+@import "./light-nav";
+@import "./blog-header";
+@import "./blog-headline";
+@import "./blog-content";
+@import "./footer";
+@import "./hide";
+@import "./fp";
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  background-color: #101820;
+  font-family: "Montserrat";
+}
+
+.blogpost {
+  margin-top: sizerem(display-2);
+  color: #ffffff;
+
+  .div-blog-detail-tag {
+    margin-bottom: sizerem(small);
+  }
+
+  .blog-detail-date {
+    font-weight: weight(bold);
+    font-size: sizerem(normal);
+
+    @include media(">tablet") {
+      font-size: sizerem(large);
+    }
+
+    @include media(">desktop") {
+      font-size: sizerem(larger);
+    }
+  }
+
+  .blog-detail-tag {
+    height: sizerem(largest);
+    line-height: 0;
+    font-weight: weight(bold);
+    font-size: sizerem(small);
+    border-radius: sizerem(normal);
+    background: white;
+
+    @include media(">desktop") {
+      font-size: sizerem(normal);
+    }
+  }
+
+  .blog-detail-title {
+    font-weight: weight(bold);
+    font-size: sizerem(largest);
+    text-transform: capitalize;
+
+    @include media(">tablet") {
+      font-size: sizerem(display-1);
+    }
+
+    @include media(">desktop") {
+      font-size: sizerem(display-2);
+    }
+  }
+
+  .blog-detail-by {
+    font-weight: weight(regular);
+    font-size: sizerem(small);
+    margin-top: sizerem(small);
+    margin-bottom: sizerem(largest);
+
+    @include media(">tablet") {
+      font-size: sizerem(normal);
+    }
+
+    @include media(">desktop") {
+      font-size: sizerem(larger);
+    }
+  }
+
+  .blog-detail-p {
+    font-weight: weight(regular);
+    font-size: sizerem(small);
+    line-height: 2;
+    text-align: justify;
+    margin-top: sizerem(small);
+
+    @include media(">tablet") {
+      font-size: sizerem(normal);
+    }
+
+    @include media(">desktop") {
+      font-size: sizerem(large);
+      margin-top: sizerem(normal);
+    }
+  }
+}
+
+.blog-detail-social {
+  .btn-social {
+    width: 100%;
+    border: none;
+  }
+
+  svg {
+    margin-right: sizerem(small);
+  }
+
+  .twitter {
+    background: #1da1f2;
+
+    svg {
+      width: sizerem(normal);
+    }
+
+    &:hover {
+      background: #1487ce;
+    }
+  }
+
+  .fb {
+    background: #3b5998;
+
+    svg {
+      width: sizerem(small);
+    }
+
+    &:hover {
+      background: #213a6f;
+    }
+  }
+}

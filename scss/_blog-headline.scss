@@ -1,0 +1,25 @@
+.blog-headline {
+  .date {
+    color: #e0e351;
+    font-weight: weight(bold);
+    font-size: sizerem(normal);
+  }
+  .title {
+    color: white;
+    font-weight: weight(bold);
+    font-size: sizerem(display-3);
+    line-height: 1.1;
+  }
+  .p {
+    color: white;
+    font-weight: weight(normal);
+    font-size: sizerem(normal);
+    line-height: 1.75;
+  }
+  .readmore {
+    color: white;
+    font-weight: weight(bold);
+    font-size: weight(smal);
+    line-height: 2;
+  }
+}

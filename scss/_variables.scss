@@ -1,0 +1,50 @@
+$font-weights: (
+  "extra-thin": 100,
+  "thin": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+$shadows: (
+  "small": 2px 2px 2px black,
+  "normal": 2px 2px 4px black,
+);
+
+@function shadow($shadow-name) {
+  @return map-get($shadows, $shadow-name);
+}
+
+$sizesrem: (
+  "extra-small": 0.35rem,
+  "smaller": 0.5rem,
+  "small": 0.7rem,
+  "normal": 1rem,
+  "large": 1.2rem,
+  "larger": 1.3rem,
+  "largest": 1.5rem,
+  "display-0": 1.75rem,
+  "display-1": 2rem,
+  "display-2": 2.5rem,
+  "display-3": 4.1rem,
+);
+
+@function sizerem($size-name) {
+  @return map-get($sizesrem, $size-name);
+}
+
+$transitions: (
+  "slow": 0.5s ease-in-out,
+  "normal": 0.25s ease-in-out,
+  "fast": 0.125s ease-in-out,
+);
+
+@function speed($transition-name) {
+  @return map-get($transitions, $transition-name);
+}
+
+$bigger: scale(1.1);

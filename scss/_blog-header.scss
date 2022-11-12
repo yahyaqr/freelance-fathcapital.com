@@ -1,0 +1,163 @@
+.blog-header {
+  .display-5 {
+    font-weight: weight(bold);
+    font-size: sizerem(largest);
+    margin: 0;
+    margin-top: sizerem(display-1);
+    color: white;
+
+    @include media(">tablet") {
+      font-weight: weight(medium);
+      font-size: sizerem(display-2);
+      margin-top: sizerem(display-2);
+    }
+
+    @include media(">desktop") {
+      font-size: sizerem(display-3);
+    }
+  }
+
+  .div-search-input {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    @include media(">tablet") {
+      display: block;
+      white-space: nowrap;
+    }
+
+    .span-search {
+      padding: sizerem(small);
+      background: none;
+      border: 1px solid white;
+      border-radius: sizerem(normal);
+      font-weight: weight(regular);
+      font-size: sizerem(normal);
+      color: white;
+      white-space: nowrap;
+      width: 67.5%;
+      margin-right: 2.5%;
+
+      @include media(">tablet") {
+        width: 50%;
+        display: inline-block;
+        margin-top: 0;
+        margin-right: sizerem(small);
+      }
+
+      @include media(">desktop") {
+        margin-right: sizerem(extra-small);
+      }
+    }
+
+    .search-btn {
+      padding: sizerem(small);
+      background: -o-linear-gradient(top, #e7df3b 0%, #5dc6ae 100%);
+      background: -webkit-gradient(linear, left top, left bottom, from(#e7df3b), to(#5dc6ae));
+      background: linear-gradient(180deg, #e7df3b 0%, #5dc6ae 100%);
+      border-radius: sizerem(normal);
+      border-style: none;
+      font-weight: weight(regular);
+      font-size: sizerem(normal);
+      white-space: nowrap;
+      line-height: 1;
+      width: 30%;
+
+      @include media(">tablet") {
+        width: auto;
+        display: inline-block;
+      }
+
+      @include media(">desktop") {
+        margin-right: sizerem(normal);
+      }
+    }
+
+    .btn-desktop {
+      padding: sizerem(small);
+
+      background-color: white;
+      border-radius: sizerem(normal);
+      border-style: none;
+      font-weight: weight(regular);
+      font-size: sizerem(normal);
+      line-height: 1;
+    }
+
+    .div-btn {
+      display: block;
+      overflow-x: scroll;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* Internet Explorer 10+ */
+      white-space: nowrap;
+      margin-top: sizerem(small);
+      height: 100%;
+
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: white;
+        border-radius: sizerem(normal);
+        border-style: none;
+        white-space: nowrap;
+      }
+
+      @include media(">tablet") {
+        display: inline-block;
+      }
+    }
+
+    @include media(">desktop") {
+      display: block;
+      overflow-x: scroll;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* Internet Explorer 10+ */
+      white-space: nowrap;
+      margin-top: sizerem(small);
+      height: 100%;
+
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+
+      &::after {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        pointer-events: none; /* ignore clicks */
+        content: "";
+        position: absolute;
+        z-index: 100;
+        height: 110%;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background: rgb(255, 255, 255);
+        background: -o-linear-gradient(
+          left,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0) 95%,
+          rgba(16, 24, 32, 1) 100%
+        );
+        background: -webkit-gradient(
+          linear,
+          left top, right top,
+          from(rgba(255, 255, 255, 0)),
+          color-stop(95%, rgba(255, 255, 255, 0)),
+          to(rgba(16, 24, 32, 1))
+        );
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0) 95%,
+          rgba(16, 24, 32, 1) 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#101820",GradientType=1);
+      }
+    }
+  }
+}

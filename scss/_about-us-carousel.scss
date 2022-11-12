@@ -1,0 +1,182 @@
+.description {
+  margin-top: sizerem(display-3);
+  color: white;
+
+  .carousel-inner {
+    padding-bottom: 100px;
+
+    @include media(">tablet") {
+      padding-bottom: 125px;
+    }
+
+    @include media(">desktop") {
+      padding-bottom: 150px;
+    }
+  }
+
+  .carousel-indicators {
+    li {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: auto;
+      height: 100px;
+      border-radius: sizerem(largest);
+      background-color: transparent;
+
+      @include media(">tablet") {
+        border-radius: sizerem(display-1);
+      }
+
+      @include media(">desktop") {
+        border-radius: sizerem(display-3);
+      }
+    }
+
+    .text-indicator {
+      margin: auto 8px;
+      font-weight: weight(regular);
+      font-size: sizerem(normal);
+      text-align: center;
+      text-indent: 0;
+
+      @include media(">tablet") {
+        font-size: sizerem(larger);
+      }
+
+      @include media(">desktop") {
+        font-size: sizerem(largest);
+      }
+    }
+
+    .active {
+      background-color: #214974;
+      height: 100%;
+
+      .text-indicator {
+        font-weight: weight(bold);
+        font-size: sizerem(larger);
+        line-height: sizerem(display-2);
+        background: -o-linear-gradient(top, #e7df3b 0%, #5dc6ae 100%);
+        background: -webkit-gradient(linear, left top, left bottom, from(#e7df3b), to(#5dc6ae));
+        background: linear-gradient(180deg, #e7df3b 0%, #5dc6ae 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+        @include media(">tablet") {
+          font-size: sizerem(display-1);
+        }
+
+        @include media(">desktop") {
+          font-size: sizerem(display-2);
+          padding: sizerem(small) sizerem(extra-small);
+        }
+      }
+    }
+  }
+
+  .carousel-head {
+    margin-bottom: sizerem(small);
+
+    .carousel-number-text {
+      font-weight: weight(medium);
+      font-size: sizerem(large);
+
+      @include media(">tablet") {
+        font-size: sizerem(largest);
+      }
+
+      @include media(">desktop") {
+        font-size: sizerem(display-1);
+      }
+    }
+
+    .carousel-numberper-text {
+      font-weight: weight(regular);
+      font-size: sizerem(small);
+
+      @include media(">tablet") {
+        font-size: sizerem(large);
+      }
+
+      @include media(">desktop") {
+        font-size: sizerem(larger);
+      }
+    }
+
+    .carousel-title-text {
+      font-weight: weight(bold);
+      font-size: sizerem(normal);
+
+      @include media(">tablet") {
+        font-size: sizerem(larger);
+      }
+
+      @include media(">desktop") {
+        font-size: sizerem(largest);
+      }
+    }
+
+    .carousel-line {
+      width: 20ch;
+      height: 3px;
+      margin-top: sizerem(smaller);
+      border-radius: sizerem(normal);
+      background: white;
+    }
+  }
+
+  .carousel-body {
+    font-weight: weight(regular);
+    font-size: sizerem(small);
+    text-align: justify;
+    line-height: 2;
+
+    .carousel-span {
+      margin-bottom: sizerem(small);
+    }
+
+    @include media(">tablet") {
+      font-size: sizerem(normal);
+    }
+
+    @include media(">desktop") {
+      font-size: sizerem(large);
+    }
+  }
+
+  @include media(">desktop") {
+    margin-top: sizerem(display-3);
+  }
+
+  .carousel-inner {
+    .carousel-control-prev,
+    .carousel-control-next {
+      top: 10px !important;
+      bottom: auto;
+      background: rgba(92, 92, 92, 0.5);
+      width: 33px;
+      height: 32px;
+    }
+
+    .carousel-control-next {
+      right: 30px !important;
+      left: auto;
+    }
+
+    .carousel-control-prev {
+      right: calc(30px + 30px + 10px) !important;
+      left: auto;
+    }
+
+    @media (min-width: 992px) {
+      .carousel-control-prev,
+      .carousel-control-next {
+        top: 30px !important;
+      }
+    }
+  }
+}
