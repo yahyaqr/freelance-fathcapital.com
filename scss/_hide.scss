@@ -1,0 +1,33 @@
+.hide-on-mobile {
+  display: none !important;
+
+  @media (min-width: 1315px) {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+
+.only-desktop {
+  display: none !important;
+
+  @include media(">desktop") {
+    display: block !important;
+  }
+}
+
+.only-desktop-inline {
+  display: none !important;
+
+  @include media(">desktop") {
+    display: inline-block !important;
+  }
+}
+
+.no-desktop {
+  display: block !important;
+
+  @include media(">desktop") {
+    display: none !important;
+  }
+}

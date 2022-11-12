@@ -1,0 +1,65 @@
+.s1 {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: justify !important;
+  -ms-flex-pack: justify !important;
+  justify-content: space-between !important;
+  color: white;
+
+  .display-4 {
+    cursor: default;
+    font-size: sizerem(display-1);
+    text-align: center;
+    text-shadow: shadow(normal);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    @include media(">tablet") {
+      font-size: sizerem(display-3);
+    }
+  }
+
+  .lead {
+    cursor: default;
+    font-size: sizerem(small);
+    font-weight: weight(regular);
+    text-align: center;
+    letter-spacing: 0.5px;
+    line-height: 2;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    @include media(">tablet") {
+      font-size: sizerem(large);
+      text-shadow: shadow(small);
+      margin-top: sizerem(largest);
+    }
+
+    @include media(">desktop") {
+      font-size: sizerem(larger);
+      line-height: 2;
+      margin-top: sizerem(display-1);
+    }
+  }
+
+  .btn-scroll {
+    padding-top: sizerem(normal);
+    border-radius: sizerem(normal);
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transition: speed(fast);
+    -o-transition: speed(fast);
+    transition: speed(fast);
+
+    &:hover {
+      -webkit-transform: translateY(5px);
+      -ms-transform: translateY(5px);
+      transform: translateY(5px);
+    }
+  }
+}

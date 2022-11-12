@@ -1,0 +1,113 @@
+.s3 {
+  height: 100vh;
+
+  .vertical-line {
+    width: 8px;
+    border-radius: 20px;
+    background: black;
+    height: 550px;
+
+    .round-line {
+      margin-left: -2px;
+
+      .dot {
+        height: 35px;
+        width: 35px;
+        margin-bottom: 35px;
+        margin-left: 3px;
+        display: inline-block;
+        background: #424242;
+        border-radius: 50%;
+        -webkit-transition: speed(slow);
+        -o-transition: speed(slow);
+        transition: speed(slow);
+
+        &:hover {
+          background: #5dc6ae;
+          cursor: pointer;
+
+          .timeline-head {
+            font-weight: 700 !important;
+          }
+        }
+
+        &.active-dot {
+          position: relative;
+          margin-bottom: 72px;
+          background: -o-linear-gradient(top, #e7df3b 0%, #5dc6ae 100%);
+          background: -webkit-gradient(linear, left top, left bottom, from(#e7df3b), to(#5dc6ae));
+          background: linear-gradient(180deg, #e7df3b 0%, #5dc6ae 100%);
+
+          @include media(">tablet") {
+            margin-bottom: 52px;
+          }
+
+          @include media(">desktop") {
+            margin-bottom: 52px;
+          }
+        }
+
+        @include media(">tablet") {
+          height: 42px;
+          width: 42px;
+          margin-bottom: 20px;
+          margin-left: 0px;
+        }
+      }
+
+      .timeline-text {
+        margin-top: 5px;
+        margin-left: 50px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        color: white;
+
+        .timeline-head {
+          width: 70vw;
+          font-size: sizerem(normal);
+          line-height: 1.5;
+          -webkit-transition: speed(slow);
+          -o-transition: speed(slow);
+          transition: speed(slow);
+          margin-left: 20px;
+
+          &.th1 {
+            font-weight: weight(bold);
+          }
+
+          @include media(">tablet") {
+            font-size: sizerem(large);
+          }
+        }
+
+        .timeline-body {
+          margin-left: 20px;
+          font-size: sizerem(small);
+          font-weight: weight(regular);
+          line-height: 2;
+          width: 60vw;
+
+          @include media(">tablet") {
+            font-size: sizerem(normal);
+            width: 70vw;
+          }
+        }
+
+        @include media(">tablet") {
+          margin-top: 10px;
+          margin-left: 50px;
+        }
+      }
+    }
+
+    @include media(">tablet") {
+      height: 480px;
+    }
+
+    @include media(">desktop") {
+      height: 432px;
+    }
+  }
+}

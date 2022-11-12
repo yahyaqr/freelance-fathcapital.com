@@ -1,0 +1,36 @@
+.intro {
+  .title {
+    color: #ffffff;
+    font-weight: weight(bold);
+    font-size: sizerem(largest);
+    margin-top: sizerem(display-3);
+
+    @include media(">tablet") {
+      margin-top: 5rem;
+      font-size: sizerem(display-1);
+    }
+
+    @include media(">desktop") {
+      margin-top: 6rem;
+      font-size: sizerem(display-2);
+    }
+  }
+
+  .desc {
+    color: #ffffff;
+    margin-top: sizerem(display-1);
+    font-size: sizerem(small);
+    line-height: 2;
+    text-align: justify;
+
+    @include media(">tablet") {
+      margin-top: sizerem(display-2);
+      font-size: sizerem(normal);
+    }
+
+    @include media(">desktop") {
+      margin-top: sizerem(display-3);
+      font-size: sizerem(large);
+    }
+  }
+}

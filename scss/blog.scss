@@ -1,0 +1,18 @@
+@import "./include-media";
+@import "./variables";
+@import "./light-nav";
+@import "./blog-header";
+@import "./blog-headline";
+@import "./blog-content";
+@import "./footer";
+@import "./hide";
+@import "./fp";
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  background-color: #101820;
+  font-family: "Montserrat";
+}

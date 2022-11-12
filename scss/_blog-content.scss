@@ -1,0 +1,119 @@
+.blog-content {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  .card {
+    background-color: transparent;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+
+    .thumbnail {
+      width: 47%;
+      margin-right: 3%;
+
+      img {
+        min-height: 100%;
+        min-width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: center;
+        object-position: center;
+        border-radius: sizerem(normal);
+      }
+
+      @include media(">desktop") {
+        width: 100%;
+        margin-bottom: sizerem(normal);
+      }
+    }
+
+    .text {
+      width: 50%;
+      color: white;
+
+      .blog-date {
+        font-size: sizerem(smaller);
+        font-weight: weight(bold);
+        line-height: 1;
+        color: #e0e351;
+        margin-bottom: sizerem(small);
+
+        @include media(">tablet") {
+          font-size: sizerem(small);
+          margin-bottom: sizerem(small);
+        }
+      }
+
+      .blog-title {
+        margin-bottom: sizerem(smaller);
+        a {
+          font-size: sizerem(normal);
+          font-weight: weight(bold);
+          line-height: 1.25;
+          color: white;
+
+          @include media(">tablet") {
+            font-size: sizerem(large);
+          }
+        }
+      }
+
+      .blog-p {
+        font-size: sizerem(small);
+        font-weight: weight(thin);
+        line-height: 1.5;
+        margin-bottom: 0;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+
+        @include media(">tablet") {
+          -webkit-line-clamp: 6;
+        }
+
+        @include media(">tablet") {
+          font-size: sizerem(normal);
+        }
+
+        @include media(">desktop") {
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+          margin-bottom: sizerem(smallest);
+        }
+      }
+
+      .blog-readmore {
+        a {
+          font-size: sizerem(smaller);
+          font-weight: weight(bold);
+          color: white;
+
+          @include media(">tablet") {
+            font-size: sizerem(small);
+          }
+        }
+      }
+
+      @include media(">desktop") {
+        width: 100%;
+      }
+    }
+
+    @include media(">desktop") {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+  }
+}

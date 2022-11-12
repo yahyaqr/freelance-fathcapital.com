@@ -1,0 +1,54 @@
+.navbar {
+  position: relative;
+  z-index: 1;
+
+  .navbar-brand {
+    display: block;
+
+    @include media(">desktop") {
+      display: none;
+    }
+  }
+
+  .navbar-collapse {
+    .navbar-nav {
+      margin-top: sizerem(small);
+      background-color: rgba(255, 255, 255, 0.25);
+
+      @include media(">tablet") {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        background-color: inherit;
+        width: inherit;
+      }
+
+      .nav-item {
+        margin-left: sizerem(normal);
+
+        @include media(">desktop") {
+          padding: sizerem(normal);
+        }
+
+        .nav-link {
+          font-weight: weight(regular);
+          font-size: sizerem(normal);
+
+          &:hover {
+            -webkit-transform: $bigger;
+            -ms-transform: $bigger;
+            transform: $bigger;
+            padding-left: sizerem(normal);
+          }
+
+          &.active {
+            font-weight: weight(bold) !important;
+          }
+
+          @include media(">desktop") {
+            font-size: sizerem(large);
+          }
+        }
+      }
+    }
+  }
+}
